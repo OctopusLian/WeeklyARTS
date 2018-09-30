@@ -1,0 +1,2 @@
+﻿## 国庆节期间，记录学习DirectX11教程的收获  
+- 2018-9-30：基础，[Github](https://github.com/OctopusLian/LearnDirectX/tree/master/DirectX_Tutorial/Tutorial01) and [Blog](https://www.cnblogs.com/OctoptusLian/p/9729605.html)。  
