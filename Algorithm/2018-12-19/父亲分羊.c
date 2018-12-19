@@ -6,6 +6,9 @@
 
 解析：
 (n+1) 是 xyz的最小公倍数
+
+根据不等式 1/2 + 1/3 + 1/7 >= 1/x + 1/y + 1/z
+求出n的最大值为41.
 */
 #include<stdio.h>
 #include<math.h>
@@ -16,7 +19,8 @@ int main()
         for(y = 1;y < 50;y++){
             for(z = 1; z < 50;z++){
                 for(n = 1;n < 50;n++){
-                    if(((n+1)*(y*z + x*z + x*y) == n*x*y*z) && (x != y && x != z && y!=z) && (((n) >= x && (n) >= y && (n) >= z))) {
+                    //判断条件 1，等式成立；2，x y z 三个值不相等；3，n要大于 x y z三个任一的值；4，x > y > z
+                    if(((n+1)*(y*z + x*z + x*y) == n*x*y*z) && (x != y && x != z && y!=z) && ((n >= x && n >= y && n >= z))) {
                         if (x>y && y>z){
                             printf("n=%d,x=%d,y=%d,z=%d\n",n,x,y,z);
                             counter++;
@@ -31,3 +35,14 @@ int main()
 
     return 0;
 }
+
+/*
+Output
+n=19,x=5,y=4,z=2
+n=11,x=6,y=4,z=2
+n=41,x=7,y=3,z=2
+n=23,x=8,y=3,z=2
+n=17,x=9,y=3,z=2
+n=14,x=10,y=3,z=2
+满足条件的(n, x, y, z)为6
+*/
